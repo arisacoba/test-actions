@@ -1,4 +1,4 @@
-name: 'ServiceNow CI/CD Rollback App'
+name: 'UQ ServiceNow CI/CD Rollback App'
 description: 'Initiate a rollback of a specified application to a specified version.'
 author: "ServiceNow"
 inputs:
@@ -8,6 +8,6 @@ inputs:
 runs:
   using: 'node12'
   main: './lib/index.js'
-#branding:
-#  icon: 'refresh-ccw'
-#  color: 'red'
+branding:
+  icon: 'refresh-ccw'
+  color: 'red'

@@ -1,0 +1,11 @@
+name: 'Test workflow'
+on: 
+  # This allows this workflow to be recalled by other workflows
+  workflow_call:
+  workflow_dispatch:
+jobs:
+  test_job:
+    name: 'Just a test job'
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - run: 'echo "This is a test job. This is the job ID: ${{ github.job }}"'

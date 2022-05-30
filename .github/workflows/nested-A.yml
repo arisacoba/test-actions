@@ -1,0 +1,8 @@
+name: 'Nested level A'
+on:
+  workflow_call:
+  workflow_dispatch:
+jobs:
+  job_a:
+    name: 'Job A'
+    uses: ./.github/workflows/nested-workflow.yml

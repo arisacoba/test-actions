@@ -6,3 +6,6 @@ jobs:
   job_a:
     name: 'Compare visual regression screenshots'
     uses: ./.github/workflows/nested-workflow.yml
+  job_a1:
+    name: 'This is nested B (empty issue checker)'
+    uses: ./.github/workflows/empty-issue-checker.yml

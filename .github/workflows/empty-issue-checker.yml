@@ -1,5 +1,6 @@
 name: 'Check empty issue'
 on: 
+  workflow_call:
   issues:
     types: [opened, edited]
 jobs:

@@ -1,0 +1,16 @@
+name: 'Check empty issue'
+on: 
+  issues:
+    types: [opened, edited]
+jobs:
+  check_empty_issue:
+    if: github.event.issue.body == ''
+    name: 'Lemme check that issue for you'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create comment
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            Forgetting something? This issue should have some sort of description 😉

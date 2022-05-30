@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 jobs:
   test_job:
-    name: 'Just a test job'
+    name: 'Call this job'
     runs-on: 'ubuntu-latest'
     steps: 
       - run: 'echo "This is a test job. This is the job ID: ${{ github.job }}"'

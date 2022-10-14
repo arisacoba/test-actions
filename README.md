@@ -1,3 +1,3 @@
 # Is this issue empty?
 
-Testing without branding from action.yml
+Test with branding from action.yml

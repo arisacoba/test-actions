@@ -1,7 +1,7 @@
 name: 'Is this empty issue?'
 description: This action checks if your GitHub Issue doesn't have any description after creation and editing
 branding:
-  icon: airplay
+  icon: printer 
   color: red
 on: 
   workflow_call:

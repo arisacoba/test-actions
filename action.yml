@@ -5,9 +5,9 @@ branding:
   color: purple
 on: 
   workflow_call:
-  inputs: 
-    issue-number:
-      required: true
+    inputs: 
+      issue-number:
+        required: true
 jobs:
   check_empty_issue:
     if: github.event.issue.body == ''

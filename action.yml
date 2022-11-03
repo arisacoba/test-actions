@@ -18,4 +18,4 @@ jobs:
         with:
           issue-number: ${{ inputs.issue-number }}
           body: |
-            Forgetting something? This issue should have some sort of description 😉
+            Forgetting something? This issue should have some sort of description 😉 (this is from main)

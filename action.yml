@@ -1,5 +1,5 @@
 name: 'Is this empty issue?'
-description: This action checks if your GitHub Issue doesn't have any description after creation and editing. Also this is another text to check how much characters can we fit in this description. I see no linter screaming at me if I'm doing something wrong. So this one still feels okay. What's the usual character count of descriptions? Average number of characters?
+description: This action checks if your GitHub Issue doesn't have any description after creation and editing. Description must be less than 125 characters.
 on: 
   workflow_call:
   issues:

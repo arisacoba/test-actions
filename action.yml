@@ -5,8 +5,9 @@ branding:
   color: purple
 on: 
   workflow_call:
-  issues:
-    types: [opened, edited]
+  inputs: 
+    issue-number:
+      required: true
 jobs:
   check_empty_issue:
     if: github.event.issue.body == ''
@@ -15,6 +16,6 @@ jobs:
       - name: Create comment
         uses: peter-evans/create-or-update-comment@v2
         with:
-          issue-number: ${{ github.event.issue.number }}
+          issue-number: ${{ inputs.issue-number }}
           body: |
             Forgetting something? This issue should have some sort of description 😉

@@ -8,10 +8,5 @@ on:
     inputs:
       config-path:
 runs:
-  using: "composite"
-  steps: 
-    steps:
-    - name: Echo
-      shell: bash
-      run: |
-        echo Heyyyyy
+  steps:
+    - run: echo "Running on main branch"

@@ -17,6 +17,6 @@ jobs:
       - name: Create comment
         uses: peter-evans/create-or-update-comment@v2
         with:
-          issue-number: ${{ inputs.issue-target }}
+          issue-number: ${{ issue-target }}
           body: |
             Forgetting something? This issue should have some sort of description 😉 (this is from main)

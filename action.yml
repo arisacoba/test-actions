@@ -6,9 +6,7 @@ branding:
 on: 
   workflow_call:
     inputs:
-      issue-target:
-        required: true
-        type: number
+      config-path:
 jobs:
   check_empty_issue:
     if: github.event.issue.body == ''
@@ -17,6 +15,6 @@ jobs:
       - name: Create comment
         uses: peter-evans/create-or-update-comment@v2
         with:
-          issue-number: ${{ issue-target }}
+          issue-number: ${{ inputs.config-path }}
           body: |
             Forgetting something? This issue should have some sort of description 😉 (this is from main)

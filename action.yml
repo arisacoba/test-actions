@@ -10,7 +10,6 @@ on:
 jobs:
   check_empty_issue:
     if: github.event.issue.body == ''
-    runs-on: ubuntu-latest
     steps:
       - name: Add echo
         run: echo 'Yep this works'

@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Add echo
-        run: "Yep this works"
+        run: echo 'Yep this works'

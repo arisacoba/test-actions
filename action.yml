@@ -7,9 +7,11 @@ on:
   workflow_call:
     inputs:
       config-path:
-jobs:
-  check_empty_issue:
-    if: github.event.issue.body == ''
+runs:
+  using: "composite"
+  steps: 
     steps:
-      - name: Add echo
-        run: echo 'Yep this works'
+    - name: Echo
+      shell: bash
+      run: |
+        echo Heyyyyy

@@ -9,4 +9,4 @@ on:
       config-path:
 runs:
   steps:
-    - run: echo "Running on main branch"
+    - run: echo "Running on tag 2.2.0"

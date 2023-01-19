@@ -1,8 +1,5 @@
 name: 'Is this empty issue? This is a new name'
 description: This action checks if your GitHub Issue doesn't have any description after creation and editing. Desc < 125 characters
-branding:
-  icon: zap 
-  color: purple
 on: 
   workflow_call:
     inputs:

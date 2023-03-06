@@ -1,5 +1,5 @@
 name: 'Empty issue checker'
-description: This action checks if your GitHub Issue doesn't have any description after creation and editing. Desc < 125 characters. Actually no it doesn't.
+description: This action checks if your GitHub Issue doesn't have any description after creation and editing. Actually no it doesn't.
 on: 
   workflow_call:
     inputs:

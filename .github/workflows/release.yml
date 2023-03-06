@@ -9,7 +9,8 @@ jobs:
     steps:
       - name: Checking out!
         uses: actions/checkout@v3
-       
+        with:
+          ref: ${{ github.event.payload.release.tag_name}}
 #       - name: Use Node.js
 #         uses: actions/setup-node@v3
 #         with:
@@ -26,7 +27,6 @@ jobs:
 #           output: 'minify/src/' # (OPTIONAL)
         
       - name: Publish action 
-        uses: actions-on-packages/package-action@0.4.1
-#        with: 
-#            path: 'dist/'
-        
+        uses: actions-on-packages/package-action@0.4.4
+#        with:
+#          path: 'dist/'

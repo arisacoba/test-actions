@@ -6,22 +6,36 @@ on:
         description: 'A boolean input'
         default: true
         required: false
+        type: boolean
       string_input:
         description: 'A string input'
         default: 'default_value'
         required: false
+        type: string
       number_input:
         description: 'A number input'
         default: 123
         required: false
+        type: number
       array_input:
         description: 'An array input'
         default: '[item1, item2, item3]'
         required: false
+        type: array
       object_input:
         description: 'An object input'
         default: '{"key1": "value1", "key2": "value2"}'
         required: false
+        type: object
+      choice_input: 
+        description: 'A choice input'
+        type: choice
+        required: true
+        options:
+          - us-west-1
+          - us-west-2
+          - us-east-1
+          - eu-west-1
 jobs:
   build:
     runs-on: ubuntu-latest

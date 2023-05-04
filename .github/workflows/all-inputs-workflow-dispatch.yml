@@ -5,7 +5,7 @@ on:
       boolean_input:
         description: 'A boolean input'
         default: true
-        required: false
+        required: true
         type: boolean
       string_input:
         description: 'A string input'
@@ -15,7 +15,7 @@ on:
       number_input:
         description: 'A number input'
         default: 123
-        required: false
+        required: true
         type: number
       array_input:
         description: 'An array input'

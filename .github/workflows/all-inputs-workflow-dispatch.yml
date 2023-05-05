@@ -2,31 +2,16 @@ name: All inputs for workflow_dispatch
 on:
   workflow_dispatch:
     inputs:
-      boolean_input:
-        description: 'A boolean input'
-        default: true
-        required: true
-        type: boolean
       string_input:
         description: 'A string input'
         default: 'default_value'
         required: false
         type: string
-      number_input:
-        description: 'A number input'
-        default: 123
+      boolean_input:
+        description: 'A boolean input'
+        default: true
         required: true
-        type: number
-      array_input:
-        description: 'An array input'
-        default: '[item1, item2, item3]'
-        required: false
-        type: array
-      object_input:
-        description: 'An object input'
-        default: '{"key1": "value1", "key2": "value2"}'
-        required: false
-        type: object
+        type: boolean
       choice_input: 
         description: 'A choice input'
         type: choice
@@ -36,13 +21,6 @@ on:
           - us-west-2
           - us-east-1
           - eu-west-1
-      print_tags:
-        required: true
-        type: boolean
-      tags:
-        description: 'Test scenario tags'
-        required: true
-        type: string
       environment:
         description: 'Environment to run tests against'
         type: environment
@@ -53,8 +31,7 @@ jobs:
     steps:
     - name: Print Inputs
       run: |
-        echo "Boolean Input: ${{ github.event.inputs.boolean_input }}"
         echo "String Input: ${{ github.event.inputs.string_input }}"
-        echo "Number Input: ${{ github.event.inputs.number_input }}"
-        echo "Array Input: ${{ github.event.inputs.array_input }}"
-        echo "Object Input: ${{ github.event.inputs.object_input }}"
+        echo "Boolean Input: ${{ github.event.inputs.boolean_input }}"
+        echo "Choice Input: ${{ github.event.inputs.choice_input }}"
+        echo "Environment Input: ${{ github.event.inputs.environment }}"

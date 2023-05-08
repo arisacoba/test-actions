@@ -1,0 +1,244 @@
+name: Stress test inputs
+on:
+  workflow_dispatch:
+    inputs:
+      string_input1:
+        description: 'A string input'
+        default: 'default_value'
+        required: false
+        type: string
+      boolean_input1:
+        description: 'A boolean input'
+        default: true
+        required: true
+        type: boolean
+      choice_input1: 
+        description: 'A choice input'
+        type: choice
+        required: true
+        options:
+          - us-west-1
+          - us-west-2
+          - us-east-1
+          - eu-west-1
+      environment1:
+        description: 'Environment to run tests against'
+        type: environment
+        required: true
+      string_input2:
+        description: 'A string input'
+        default: 'default_value'
+        required: false
+        type: string
+      boolean_input2:
+        description: 'A boolean input'
+        default: true
+        required: true
+        type: boolean
+      choice_input2: 
+        description: 'A choice input'
+        type: choice
+        required: true
+        options:
+          - us-west-1
+          - us-west-2
+          - us-east-1
+          - eu-west-1
+      environment2:
+        description: 'Environment to run tests against'
+        type: environment
+        required: true
+      string_input3:
+        description: 'A string input'
+        default: 'default_value'
+        required: false
+        type: string
+      boolean_input3:
+        description: 'A boolean input'
+        default: true
+        required: true
+        type: boolean
+      choice_input3: 
+        description: 'A choice input'
+        type: choice
+        required: true
+        options:
+          - us-west-1
+          - us-west-2
+          - us-east-1
+          - eu-west-1
+      environment3:
+        description: 'Environment to run tests against'
+        type: environment
+        required: true
+      string_input4:
+        description: 'A string input'
+        default: 'default_value'
+        required: false
+        type: string
+      boolean_input4:
+        description: 'A boolean input'
+        default: true
+        required: true
+        type: boolean
+      choice_input4: 
+        description: 'A choice input'
+        type: choice
+        required: true
+        options:
+          - us-west-1
+          - us-west-2
+          - us-east-1
+          - eu-west-1
+      environment4:
+        description: 'Environment to run tests against'
+        type: environment
+        required: true
+      string_input5:
+        description: 'A string input'
+        default: 'default_value'
+        required: false
+        type: string
+      boolean_input5:
+        description: 'A boolean input'
+        default: true
+        required: true
+        type: boolean
+      choice_input5: 
+        description: 'A choice input'
+        type: choice
+        required: true
+        options:
+          - us-west-1
+          - us-west-2
+          - us-east-1
+          - eu-west-1
+      environment5:
+        description: 'Environment to run tests against'
+        type: environment
+        required: true
+      string_input6:
+        description: 'A string input'
+        default: 'default_value'
+        required: false
+        type: string
+      boolean_input6:
+        description: 'A boolean input'
+        default: true
+        required: true
+        type: boolean
+      choice_input6: 
+        description: 'A choice input'
+        type: choice
+        required: true
+        options:
+          - us-west-1
+          - us-west-2
+          - us-east-1
+          - eu-west-1
+      environment6:
+        description: 'Environment to run tests against'
+        type: environment
+        required: true
+      string_input7:
+        description: 'A string input'
+        default: 'default_value'
+        required: false
+        type: string
+      boolean_input7:
+        description: 'A boolean input'
+        default: true
+        required: true
+        type: boolean
+      choice_input7: 
+        description: 'A choice input'
+        type: choice
+        required: true
+        options:
+          - us-west-1
+          - us-west-2
+          - us-east-1
+          - eu-west-1
+      environment7:
+        description: 'Environment to run tests against'
+        type: environment
+        required: true
+      string_input8:
+        description: 'A string input'
+        default: 'default_value'
+        required: false
+        type: string
+      boolean_input8:
+        description: 'A boolean input'
+        default: true
+        required: true
+        type: boolean
+      choice_input8: 
+        description: 'A choice input'
+        type: choice
+        required: true
+        options:
+          - us-west-1
+          - us-west-2
+          - us-east-1
+          - eu-west-1
+      environment8:
+        description: 'Environment to run tests against'
+        type: environment
+        required: true
+      string_input9:
+        description: 'A string input'
+        default: 'default_value'
+        required: false
+        type: string
+      boolean_input9:
+        description: 'A boolean input'
+        default: true
+        required: true
+        type: boolean
+      choice_input9: 
+        description: 'A choice input'
+        type: choice
+        required: true
+        options:
+          - us-west-1
+          - us-west-2
+          - us-east-1
+          - eu-west-1
+      environment9:
+        description: 'Environment to run tests against'
+        type: environment
+        required: true
+      string_input:
+        description: 'A string input'
+        default: 'default_value'
+        required: false
+        type: string
+      boolean_input:
+        description: 'A boolean input'
+        default: true
+        required: true
+        type: boolean
+      choice_input: 
+        description: 'A choice input'
+        type: choice
+        required: true
+        options:
+          - us-west-1
+          - us-west-2
+          - us-east-1
+          - eu-west-1
+      environment:
+        description: 'Environment to run tests against'
+        type: environment
+        required: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print Inputs
+      run: |
+        echo "String Input: ${{ github.event.inputs.string_input }}"
+        echo "Boolean Input: ${{ github.event.inputs.boolean_input }}"
+        echo "Choice Input: ${{ github.event.inputs.choice_input }}"
+        echo "Environment Input: ${{ github.event.inputs.environment }}"

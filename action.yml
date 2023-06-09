@@ -1,4 +1,4 @@
-name: Selector Citation AI Bill of Materials Generator
+name: Selector Citation AI Bill of Materials Generator with Semantic Versioning
 description: This action checks if your GitHub Issue doesn't have any description after creation and editing. Actually no it doesn't.
 on: 
   workflow_call:

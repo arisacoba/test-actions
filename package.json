@@ -1,0 +1,23 @@
+{
+  "name": "@aris_acoba/test-actions",
+  "version": "1.0.0",
+  "description": "Dummy package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arisacoba/test-actions.git"
+  },
+  "keywords": [
+    "playground",
+    "test"
+  ],
+  "author": "aris_acoba",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arisacoba/test-actions/issues"
+  },
+  "homepage": "https://github.com/arisacoba/test-actions#readme"
+}

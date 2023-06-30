@@ -1,6 +1,6 @@
 {
   "name": "@aris_acoba/test-actions",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Dummy package",
   "main": "index.js",
   "scripts": {

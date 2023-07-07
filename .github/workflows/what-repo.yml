@@ -10,7 +10,7 @@ jobs:
         run: echo "The current repository name is $REPO_NAME"
       - name: Export Repository Name as Annotation
         run: |
-          echo "::set-output name=repository_name::$REPO_NAME"
+          echo "{repository_name}={$REPO_NAME}" >> $GITHUB_OUTPUT
         env:
           REPO_NAME: ${{ env.GITHUB_REPOSITORY }}
       - name: Display Repository Name

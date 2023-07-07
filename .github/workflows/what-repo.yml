@@ -1,9 +1,20 @@
-name: "What's my repo name"
-on: 
-  workflow_dispatch:
+name: "What's my repo name?"
+on: workflow_dispatch
 jobs:
   echo-repo-name:
     runs-on: ubuntu-latest
     steps:
       - name: Echo Repository Name
-        run: echo $GITHUB_REPOSITORY
+        env:
+          REPO_NAME: ${{ env.GITHUB_REPOSITORY }}
+        run: echo "The current repository name is $REPO_NAME"
+      - name: Export Repository Name as Annotation
+        run: |
+          echo "::set-output name=repository_name::$REPO_NAME"
+        env:
+          REPO_NAME: ${{ env.GITHUB_REPOSITORY }}
+      - name: Display Repository Name
+        run: echo "The repository name is ${{ steps.export.outputs.repository_name }}"
+        env:
+          REPO_NAME: ${{ env.GITHUB_REPOSITORY }}
+        if: always()

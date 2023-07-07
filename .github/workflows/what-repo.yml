@@ -5,13 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo Repository Name
-        env:
-          REPO_NAME: ${{ env.GITHUB_REPOSITORY }}
-        run: |
-          echo "The current repository name is $REPO_NAME"
-          echo "REPOSITORY_NAME=$REPO_NAME" >> $GITHUB_ENV
-      - name: Display Repository Name
-        run: |
-          echo "The repository name is ${{ env.REPOSITORY_NAME }}"
-          echo "::set-output name=repository_name::${{ env.REPOSITORY_NAME }}"
-        if: always()
+        run: echo $GITHUB_REPOSITORY

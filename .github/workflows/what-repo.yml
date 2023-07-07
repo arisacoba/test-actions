@@ -1,0 +1,9 @@
+name: "What's my repo name"
+on: 
+  workflow_dispatch:
+jobs:
+  echo-repo-name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Repository Name
+        run: echo $GITHUB_REPOSITORY

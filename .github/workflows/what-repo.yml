@@ -7,14 +7,11 @@ jobs:
       - name: Echo Repository Name
         env:
           REPO_NAME: ${{ env.GITHUB_REPOSITORY }}
-        run: echo "The current repository name is $REPO_NAME"
-      - name: Export Repository Name as Annotation
         run: |
-          echo "{repository_name}={$REPO_NAME}" >> $GITHUB_OUTPUT
-        env:
-          REPO_NAME: ${{ env.GITHUB_REPOSITORY }}
+          echo "The current repository name is $REPO_NAME"
+          echo "REPOSITORY_NAME=$REPO_NAME" >> $GITHUB_ENV
       - name: Display Repository Name
-        run: echo "The repository name is ${{ steps.export.outputs.repository_name }}"
-        env:
-          REPO_NAME: ${{ env.GITHUB_REPOSITORY }}
+        run: |
+          echo "The repository name is ${{ env.REPOSITORY_NAME }}"
+          echo "::set-output name=repository_name::${{ env.REPOSITORY_NAME }}"
         if: always()
